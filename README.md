@@ -1,6 +1,58 @@
-# React + TypeScript + Vite
+# Links - Personal Links Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A personal links page built with React + TypeScript + Vite, deployed on GitHub Pages.
+
+## Live Demo
+
+Visit the live site: [https://laurolyra.github.io/](https://laurolyra.github.io/)
+
+## Development
+
+This project uses React with TypeScript and Vite for fast development and building.
+
+### Local Development
+
+```bash
+npm install
+npm run dev
+```
+
+### Deployment
+
+This project is configured for GitHub Pages deployment using the gh-pages package.
+
+To deploy:
+
+```bash
+npm run deploy
+```
+
+This will:
+1. Build the project (`npm run build`)
+2. Deploy the `dist` folder to the `gh-pages` branch
+3. Make your site available at `https://laurolyra.github.io/`
+
+**Important**: Make sure to:
+1. Enable GitHub Pages in your repository settings and set the source to the `gh-pages` branch
+2. If this is your main GitHub Pages site, you might need to deploy to the `main` branch instead of `gh-pages` (see instructions below)
+
+### Deploying to Main GitHub Pages Site (laurolyra.github.io)
+
+If you want this to be your main GitHub Pages site (laurolyra.github.io), you have two options:
+
+#### Option 1: Deploy to main branch (Recommended)
+1. Rename your repository to `laurolyra.github.io`
+2. Update the deploy script in package.json:
+   ```json
+   "deploy": "gh-pages -d dist -b main"
+   ```
+3. Run `npm run deploy`
+
+#### Option 2: Keep current setup
+1. Keep the repository name as `links`
+2. In GitHub repository settings → Pages → Source → select "Deploy from a branch"
+3. Set branch to `gh-pages` and folder to `/ (root)`
+4. Run `npm run deploy`
 
 Currently, two official plugins are available:
 
